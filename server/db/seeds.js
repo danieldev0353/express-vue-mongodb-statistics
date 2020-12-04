@@ -178,28 +178,95 @@ db.historical_figures.insertMany(
      ],
      biography: "James Cook was a British navigator and explorer who sailed and mapped much of the South Pacific.",
     },
-    {name: "",
-    category: "",
+    {name: "Rosa Parks",
+    category: "Leaders",
     born: {
-        date: "",
-        place: ""
+        date: "1913-02-4",
+        place: "Tuskegee, Alabama"
     },
     died: {
+       date: "2005-10-24",
+       place: "Detroit, Michigan"
+    },
+    bestKnownFor: "Montgomery Bus Boycott",
+    occupation: "Civil Rights Activist",
+    funFacts: [
+       "Rosa was awarded the Congressional Gold Medal as well as the Presidential Medal of Freedom.",
+       "Rosa often worked as a seamstress when she needed a job or to make some extra money.",
+       "You can visit the actual bus that Rosa Parks sat in at the Henry Ford Museum in Michigan.",
+       "When she lived in Detroit, she worked as a secretary for U.S. Representative John Conyers for many years.",
+       "She wrote an autobiography called Rosa Parks: My Story in 1992."
+    ],
+    biography: "Rosa grew up in the southern United States in Alabama. Her full name was Rosa Louise McCauley and she was born in Tuskegee, Alabama on February 4, 1913 to Leona and James McCauley. Her mother was a teacher and her father a carpenter. She had a younger brother named Sylvester.",
+   },
+   {name: "",
+   category: "",
+   born: {
        date: "",
        place: ""
-    },
-    bestKnownFor: "",
-    occupation: "",
-    funFacts: [
-       "",
-       "",
-       "",
-       "",
-       "",
-       "",
-       ""
-    ],
-    biography: "",
    },
+   died: {
+      date: "",
+      place: ""
+   },
+   bestKnownFor: "",
+   occupation: "",
+   funFacts: [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+   ],
+   biography: "",
+  },
+  {name: "",
+  category: "",
+  born: {
+      date: "",
+      place: ""
+  },
+  died: {
+     date: "",
+     place: ""
+  },
+  bestKnownFor: "",
+  occupation: "",
+  funFacts: [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+  ],
+  biography: "",
+ },
+ {name: "",
+ category: "",
+ born: {
+     date: "",
+     place: ""
+ },
+ died: {
+    date: "",
+    place: ""
+ },
+ bestKnownFor: "",
+ occupation: "",
+ funFacts: [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+ ],
+ biography: "",
+},
     ]
     )
