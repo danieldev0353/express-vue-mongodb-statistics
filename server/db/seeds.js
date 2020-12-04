@@ -72,5 +72,72 @@ db.historical_figures.insertMany(
         ],
         biography: "Winston Churchill was one of the great world leaders of the 20th century. His leadership helped Britain to stand strong against Hitler and the Germans, even when they were the last country left fighting. He is also famous for his inspiring speeches and quotes.",
        },
+       {name: "Frida Kahlo",
+         category: "Artist",
+         born: {
+             date: "1907-07-6",
+             place: "Mexico City, Mexico"
+         },
+         died: {
+            date: "1954-07-13",
+            place: "Mexico City, Mexico"
+         },
+         bestKnownFor: "Surrealism art",
+         occupation: "Artist",
+         funFacts: [
+            "Her full name is Magdalena Carmen Frida Kahlo y Calderon.",
+            "In 1984, Mexico declared the works of Frida Kahlo part of the country's national cultural heritage.",
+            "Her painting The Frame was the first painting by a Mexican artist acquired by the Louvre.",
+            "Her paintings often featured aspects of Aztec Mythology and Mexican folklore.",
+            "The major motion picture Frida told the story of her life and earned 6 Academy Award nominations."
+         ],
+         biography: "Although Frida had some success as an artist during her lifetime, she was not internationally famous. It wasn't until the late 1970s that her artwork was rediscovered by art historians. Since that time, Frida has become so famous that the term 'Fridamania' has been used to describe her popularity.",
+        },
+        {name: "",
+        category: "",
+        born: {
+            date: "",
+            place: ""
+        },
+        died: {
+           date: "",
+           place: ""
+        },
+        bestKnownFor: "",
+        occupation: "",
+        funFacts: [
+           "",
+           "",
+           "",
+           "",
+           "",
+           "",
+           ""
+        ],
+        biography: "",
+       },
+       {name: "",
+       category: "",
+       born: {
+           date: "",
+           place: ""
+       },
+       died: {
+          date: "",
+          place: ""
+       },
+       bestKnownFor: "",
+       occupation: "",
+       funFacts: [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+       ],
+       biography: "",
+      },
     ]
     )
