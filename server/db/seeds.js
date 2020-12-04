@@ -114,28 +114,94 @@ db.historical_figures.insertMany(
         ],
         biography: "Henry Ford is most famous for founding the Ford Motor Company. Ford is still one of the world's largest producers of cars including brands such as Ford, Lincoln, Mercury, Volvo, Mazda, and Land Rover. Ford was a pioneer in manufacturing using the assembly line.",
        },
-       {name: "",
-       category: "",
+       {name: "King Henry VIII",
+       category: "Royalty",
        born: {
-           date: "",
-           place: ""
+           date: "1491-06-28",
+           place: "Greenwich, England"
        },
        died: {
-          date: "",
-          place: ""
+          date: "1547-01-28",
+          place: "London, England"
        },
-       bestKnownFor: "",
-       occupation: "",
+       bestKnownFor: "Marrying six times and splitting the Church of England from the Catholic Church",
+       occupation: "King of England",
        funFacts: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Anne Boleyn did not have a son, but she did give birth to a daughter Elizabeth who would become one of the greatest monarchs in English history.",
+          "Not only was his son Edward VI king, but his daughters Mary and Elizabeth would also be monarchs of England.",
+          "Henry VIII established the permanent navy of England.",
+          "Shakespeare wrote a play about his life called Henry VIII.",
+          "He spent lavishly as king, building over 50 palaces.",
+          "He spent the entire fortune his father had left him and died in massive debt."
        ],
-       biography: "",
+       biography: "Henry was determined to have a male heir. When Anne Boleyn did not have a son, he had her executed. Then he married Jane Seymour. Jane finally gave Henry what he wanted and had a son named Edward. However, Jane died during childbirth. Henry married three more times including Anne of Cleves, Catherine Howard, and Catherine Parr.",
       },
+      {name: "Anne Frank",
+      category: "Writer",
+      born: {
+          date: "1929-06-12",
+          place: "Frankfurt, Germany"
+      },
+      died: {
+         date: "1945-03-01",
+         place: "Bergen-Belsen concentration camp, Nazi Germany."
+      },
+      bestKnownFor: "Writing a diary while hiding from the Nazis during World War II.",
+      occupation: "None",
+      funFacts: [
+         "Anne and Margot called their father by his nickname 'Pim'.",
+         "You can go here to read more about the Holocaust that caused the death of over 6 million Jewish people during World War II.",
+         "Anne's diary was published in over sixty-five different languages.",
+         "You can visit the Frank's hideaway, the Secret Annex, in Amsterdam today.",
+         "One of Anne's hobbies was to collect photos and postcards of movie stars."
+      ],
+      biography: "Anne Frank was born in Frankfurt, Germany on June 12, 1929. Her father, Otto Frank, was a businessman while her mother, Edith, stayed home taking care of Anne and her older sister Margot.",
+     },
+     {name: "",
+     category: "",
+     born: {
+         date: "",
+         place: ""
+     },
+     died: {
+        date: "",
+        place: ""
+     },
+     bestKnownFor: "",
+     occupation: "",
+     funFacts: [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+     ],
+     biography: "",
+    },
+    {name: "",
+    category: "",
+    born: {
+        date: "",
+        place: ""
+    },
+    died: {
+       date: "",
+       place: ""
+    },
+    bestKnownFor: "",
+    occupation: "",
+    funFacts: [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+    ],
+    biography: "",
+   },
     ]
     )
