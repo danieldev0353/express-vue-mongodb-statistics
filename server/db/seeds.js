@@ -199,74 +199,50 @@ db.historical_figures.insertMany(
     ],
     biography: "Rosa grew up in the southern United States in Alabama. Her full name was Rosa Louise McCauley and she was born in Tuskegee, Alabama on February 4, 1913 to Leona and James McCauley. Her mother was a teacher and her father a carpenter. She had a younger brother named Sylvester.",
    },
-   {name: "",
-   category: "",
+   {name: "Joan of Arc",
+   category: "Leaders",
    born: {
-       date: "",
-       place: ""
+       date: "1412",
+       place: "Domremy, France"
    },
    died: {
-      date: "",
-      place: ""
+      date: "1431-05-30",
+      place: "Rouen, France"
    },
-   bestKnownFor: "",
-   occupation: "",
+   bestKnownFor: "Leading the French against the English in the Hundred Years War at a young age",
+   occupation: "Military Leader",
    funFacts: [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "When King Charles first met Joan he dressed as a courtier to try and fool Joan. Joan, however, immediately approached the king and bowed to him.",
+      "When Joan traveled she cut her hair and dressed to look like a man.",
+      "King Charles of France, who Joan had helped to reclaim his throne, did nothing to help her once she was captured by the English.",
+      "In 1920, Joan of Arc was proclaimed a Saint of the Catholic Church.",
+      "Her nickname was 'The Maid of Orleans'.",
+      " It is said that Joan knew she would be wounded in the Battle of Orleans. She also predicted that something bad would happen at the city of Compiegne where she was captured."
    ],
-   biography: "",
+   biography: "Joan of Arc grew up in a small town in France. Her father, Jacques, was a farmer who also worked as an official for the town. Joan worked on the farm and learned how to sew from her mother, Isabelle. Joan was also very religious.",
   },
-  {name: "",
-  category: "",
+  {name: "Mohandas Gandhi",
+  category: "Activist",
   born: {
-      date: "",
-      place: ""
+      date: "1869-10-2",
+      place: "Porbandar, India"
   },
   died: {
-     date: "",
-     place: ""
+     date: "1948-01-30",
+     place: "New Delhi, India"
   },
-  bestKnownFor: "",
-  occupation: "",
+  bestKnownFor: "Organising non-violent civil rights protests",
+  occupation: "Civil Rights Leader",
   funFacts: [
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
+     "The 1982 movie Gandhi won the Academy Award for best motion picture.",
+     "His birthday is a national holiday in India. It is also the International Day of Non-Violence.",
+     "He was the 1930 Time Magazine Man of the Year.",
+     "Gandhi wrote a lot.",
+     "The Collected Works of Mahatma Gandhi have 50,000 pages!",
+     "He was nominated for the Nobel Peace Prize five times."
+     
   ],
-  biography: "",
+  biography: "Mohandas Gandhi is one of the most famous leaders and champions for justice in the world. His principles and firm belief in non-violence have been followed by many other important civil rights leaders including Martin Luther King, Jr. and Nelson Mandela. His renown is such that he is mostly just referred to by the single name 'Gandhi'.",
  },
- {name: "",
- category: "",
- born: {
-     date: "",
-     place: ""
- },
- died: {
-    date: "",
-    place: ""
- },
- bestKnownFor: "",
- occupation: "",
- funFacts: [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
- ],
- biography: "",
-},
     ]
     )
