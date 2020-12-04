@@ -93,28 +93,26 @@ db.historical_figures.insertMany(
          ],
          biography: "Although Frida had some success as an artist during her lifetime, she was not internationally famous. It wasn't until the late 1970s that her artwork was rediscovered by art historians. Since that time, Frida has become so famous that the term 'Fridamania' has been used to describe her popularity.",
         },
-        {name: "",
-        category: "",
+        {name: "Henry Ford",
+        category: "Inventor",
         born: {
-            date: "",
-            place: ""
+            date: "1863-07-30",
+            place: "Greenfield Township, Michigan"
         },
         died: {
-           date: "",
-           place: ""
+           date: "1947-04-7",
+           place: "Dearborn, Michigan"
         },
-        bestKnownFor: "",
-        occupation: "",
+        bestKnownFor: "Founder of the Ford Motor Company and helped develop the assembly line for mass production",
+        occupation: "Businessman and Inventor",
         funFacts: [
-           "",
-           "",
-           "",
-           "",
-           "",
-           "",
-           ""
+           "Henry worked as an engineer at the Edison Illumination Company where he met Thomas Edison.",
+           "His first try at an automobile company was in collaboration with Thomas Edison and was called the Detroit Automobile Company.",
+           "Ford had Edison's last breath saved in a test tube and you can still see the test tube at the Henry Ford Museum.",
+           "In 1918 he ran for a US Senate seat, but lost.",
+           "He was a race car driver early in his career."
         ],
-        biography: "",
+        biography: "Henry Ford is most famous for founding the Ford Motor Company. Ford is still one of the world's largest producers of cars including brands such as Ford, Lincoln, Mercury, Volvo, Mazda, and Land Rover. Ford was a pioneer in manufacturing using the assembly line.",
        },
        {name: "",
        category: "",
