@@ -157,28 +157,26 @@ db.historical_figures.insertMany(
       ],
       biography: "Anne Frank was born in Frankfurt, Germany on June 12, 1929. Her father, Otto Frank, was a businessman while her mother, Edith, stayed home taking care of Anne and her older sister Margot.",
      },
-     {name: "",
-     category: "",
+     {name: "Captain James Cook",
+     category: "Explorer",
      born: {
-         date: "",
-         place: ""
+         date: "1728-10-27",
+         place: "Marton, England"
      },
      died: {
-        date: "",
-        place: ""
+        date: "1779-02-14",
+        place: "Hawaiian Islands"
      },
-     bestKnownFor: "",
-     occupation: "",
+     bestKnownFor: "Exploring the South Pacific",
+     occupation: "Explorer",
      funFacts: [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "The first European to set foot on Australia's east coast was Cook's nephew Isaac Smith.",
+        "The Endeavour also had scientists aboard including botanist Joseph Banks. They collected and recorded numerous plants and animals throughout their journey.",
+        "Tahiti was so nice and the natives so friendly that some of Cook's crew wanted to stay.",
+        "The Maori warriors in New Zealand wore tattoos on their faces. Some of the Endeavour's sailors got tattoos on their arms and started a tradition that continues today.",
+        "As Cook was exploring during the American Revolution, Benjamin Franklin wrote to the captains of America's warships telling them to not attack or harass Cook's ships."
      ],
-     biography: "",
+     biography: "James Cook was a British navigator and explorer who sailed and mapped much of the South Pacific.",
     },
     {name: "",
     category: "",
