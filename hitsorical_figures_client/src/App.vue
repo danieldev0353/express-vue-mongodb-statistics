@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Historical Figures</h1>
+    <figures-list :historicalFigures="historicalFigures" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import figuresList from './components/figuresList'
 export default {
-  name: 'App',
+  name: 'app',
+  data(){
+  return {
+    historicalFigures: [ 
+      {name: 'person1', age: 5},
+      {name: 'person2', age: 6}
+      ],
+    favourites: []
+    }
+  },
+
+  mounted(){
+
+  },
+
   components: {
-    HelloWorld
+  'figures-list': figuresList
+  },
+
+  methods: {
+
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="css" scoped>
+
 </style>
