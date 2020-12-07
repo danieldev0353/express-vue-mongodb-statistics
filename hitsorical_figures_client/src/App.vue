@@ -17,6 +17,7 @@
 import figuresList from './components/figuresList'
 import figureDetail from './components/figureDetail'
 import interactiveMap from './components/interactiveMap'
+import FiguresService from './services/FiguresServices.js'
 
 import { eventBus } from './main.js'
 
@@ -39,9 +40,12 @@ export default {
   'figure-detail': figureDetail,
   'interactive-map': interactiveMap
   },
-
   methods: {
-
+    fetchFigures(){
+      FiguresService.getFigures()
+      .then(historicalFigures)
+    }
+  
   }
 }
 </script>
