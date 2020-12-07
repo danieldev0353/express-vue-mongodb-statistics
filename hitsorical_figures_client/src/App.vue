@@ -7,6 +7,9 @@
 
 <script>
 import figuresList from './components/figuresList'
+import FiguresService from './services/FiguresServices.js'
+
+
 export default {
   name: 'app',
   data(){
@@ -23,9 +26,12 @@ export default {
   components: {
   'figures-list': figuresList
   },
-
   methods: {
-
+    fetchFigures(){
+      FiguresService.getFigures()
+      .then(historicalFigures)
+    }
+  
   }
 }
 </script>
