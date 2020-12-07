@@ -48,10 +48,9 @@ export default {
 
   computed:{
     filteredFigures(){
-      return this.historicalFigures.filter((figure) => figure.name.toLowerCase().includes(this.searchTerm.toLowerCase()))
-    }
-  },
-
+      return this.historicalFigures.filter(figure =>this.figuresFilter(figure))
+  }
+ },
   components: {
   'figures-list': figuresList,
   'figure-detail': figureDetail,
@@ -62,6 +61,20 @@ export default {
     fetchFigures(){
       FiguresService.getFigures()
       .then(data => this.historicalFigures = data)
+    },
+
+    figuresFilter(figure){
+      if ( figure.name.toLowerCase().includes( this.searchTerm.toLowerCase()) ) return true 
+      if ( figure.category.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true 
+      if ( figure.bestKnownFor.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true 
+      if ( figure.biography.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true 
+      if ( figure.born.date.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true
+      if ( figure.died.date.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true
+      if ( figure.born.place.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true
+      if ( figure.died.place.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true
+      if ( figure.occupation.toLowerCase().includes( this.searchTerm.toLowerCase() ) ) return true
+    
+      return false
     }
   }
 }
