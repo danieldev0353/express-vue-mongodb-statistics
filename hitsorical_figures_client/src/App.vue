@@ -6,8 +6,8 @@
       </div>
       <input type="text">
     </header>
-    <interactive-map></interactive-map>
-    <figure-detail></figure-detail>
+    <interactive-map v-if="!figureDetail"></interactive-map>
+    <figure-detail :figure="figureDetail" v-if="figureDetail"></figure-detail>
     <figures-list :historicalFigures="historicalFigures" ></figures-list>
     <footer></footer>
   </div>
@@ -32,7 +32,10 @@ export default {
   },
 
   mounted(){
+    this.fetchFigures(),
 
+    eventBus.$on('show-figure', (figure) => this.figureDetail = figure)
+    eventBus.$on('close-detail', () => this.figureDetail = null)
   },
 
   components: {
@@ -43,7 +46,7 @@ export default {
   methods: {
     fetchFigures(){
       FiguresService.getFigures()
-      .then(historicalFigures)
+      .then(data => this.historicalFigures = data)
     }
   
   }

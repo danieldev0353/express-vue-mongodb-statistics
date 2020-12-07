@@ -1,9 +1,9 @@
 <template>
-  <div class="thumbnail">
+  <div class="thumbnail" v-on:click="handleClick">
       <header>
-          <img src="" alt="">
+          <img src="https://image.flaticon.com/icons/png/128/149/149071.png" alt="">
       </header>
-      <footer>{{ figure.name }}</footer>
+      <footer>{{figure.name}}</footer>
   </div>
 </template>
 
@@ -12,11 +12,17 @@ import { eventBus } from '../main.js'
 
 export default {
     name: "figure-thumbnail",
-    props: ["figure"]
+    props: ["figure"],
+    methods: {
+        handleClick(){
+            eventBus.$emit('show-figure', this.figure)
+
+        }
+    }
 
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
