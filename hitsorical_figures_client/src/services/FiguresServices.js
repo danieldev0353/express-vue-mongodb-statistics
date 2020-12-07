@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:300/api/figures'
+const baseUrl = 'http://localhost:3000/api/historical_figures'
 
 export default{
 
