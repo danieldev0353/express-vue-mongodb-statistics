@@ -3,6 +3,7 @@
     <header>
       <div id="logo-container">
         <h1>Historical Figures</h1>
+        <figures-filter-search :historicalFigures="historicalFigures" />
       </div>
       <input type="text">
     </header>
@@ -18,6 +19,7 @@ import figuresList from './components/figuresList'
 import figureDetail from './components/figureDetail'
 import interactiveMap from './components/interactiveMap'
 import FiguresService from './services/FiguresServices.js'
+import figuresFilterSearch from './components/figuresFilterSearch'
 
 import { eventBus } from './main.js'
 
@@ -27,7 +29,7 @@ export default {
   return {
     historicalFigures: [],
     figureDetail: null,
-    favourites: []
+    favourites: [],
     }
   },
 
@@ -36,12 +38,16 @@ export default {
 
     eventBus.$on('show-figure', (figure) => this.figureDetail = figure)
     eventBus.$on('close-detail', () => this.figureDetail = null)
+    eventBus.$on('figure-selected'), (figure) => {
+      this.figure = figure
+    }
   },
 
   components: {
   'figures-list': figuresList,
   'figure-detail': figureDetail,
-  'interactive-map': interactiveMap
+  'interactive-map': interactiveMap,
+  'figures-filter-search': figuresFilterSearch
   },
   methods: {
     fetchFigures(){
