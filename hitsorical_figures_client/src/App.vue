@@ -3,13 +3,15 @@
     <header>
       <div id="logo-container">
         <h1>Historical Figures</h1>
-        <figures-filter-search :historicalFigures="historicalFigures" />
+        <!-- <figures-filter-search :historicalFigures="historicalFigures" /> -->
+        <input type="text" v-model="searchTerm" placeholder="Search...">
       </div>
       <input type="text">
     </header>
     <interactive-map v-if="!figureDetail"></interactive-map>
     <figure-detail :figure="figureDetail" v-if="figureDetail"></figure-detail>
-    <figures-list :historicalFigures="historicalFigures" ></figures-list>
+    <figures-list :historicalFigures="filteredFigures"></figures-list>
+    <!-- <figures-list :historicalFigures="historicalFigures" ></figures-list> -->
     <footer></footer>
   </div>
 </template>
@@ -30,6 +32,7 @@ export default {
     historicalFigures: [],
     figureDetail: null,
     favourites: [],
+    searchTerm: ""
     }
   },
 
@@ -40,6 +43,12 @@ export default {
     eventBus.$on('close-detail', () => this.figureDetail = null)
     eventBus.$on('figure-selected'), (figure) => {
       this.figure = figure
+    }
+  },
+
+  computed:{
+    filteredFigures(){
+      return this.historicalFigures.filter((figure) => figure.name.toLowerCase().includes(this.searchTerm.toLowerCase()))
     }
   },
 
@@ -54,7 +63,6 @@ export default {
       FiguresService.getFigures()
       .then(data => this.historicalFigures = data)
     }
-  
   }
 }
 </script>

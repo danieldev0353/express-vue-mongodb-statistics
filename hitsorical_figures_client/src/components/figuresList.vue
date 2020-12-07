@@ -6,7 +6,7 @@
 
             </div>
         </header>
-        <figure-thumbnail v-for="(figure, index) in historicalFigures" :key="index" :figure="figure"/>
+        <figure-thumbnail v-for="(figure, index) of historicalFigures" :key="index" :figure="figure"/>
     </div>
 </template>
 
