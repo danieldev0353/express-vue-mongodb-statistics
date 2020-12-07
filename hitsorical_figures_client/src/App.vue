@@ -1,15 +1,17 @@
 <template>
   <div id="site-wrapper">
-    <header>
+    <header id="site-header">
       <div id="logo-container">
         <h1>Historical Figures</h1>
       </div>
-      <input type="text">
+      <input type="text" class="search-box" placeholder="Search...">
     </header>
     <interactive-map v-if="!figureDetail"></interactive-map>
     <figure-detail :figure="figureDetail" v-if="figureDetail"></figure-detail>
     <figures-list :historicalFigures="historicalFigures" ></figures-list>
-    <footer></footer>
+    <footer id="site-footer">
+
+    </footer>
   </div>
 </template>
 
@@ -53,6 +55,29 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
+body {
+  margin: 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#site-header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(237, 127, 187);
+  justify-content: space-between;
+  align-content: center;
+  padding: 0px 5%;
+}
+
+.search-box {
+  height: 20px;
+  margin: auto 0px;
+}
+
+#site-footer {
+  padding: 5%;
+  background-color: rgb(58, 56, 57);
+}
 
 </style>
