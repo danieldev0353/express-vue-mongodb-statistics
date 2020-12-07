@@ -11,10 +11,7 @@ export default {
   name: 'app',
   data(){
   return {
-    historicalFigures: [ 
-      {name: 'person1', age: 5},
-      {name: 'person2', age: 6}
-      ],
+    historicalFigures: [],
     favourites: []
     }
   },
