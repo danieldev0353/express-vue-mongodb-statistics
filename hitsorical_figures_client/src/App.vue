@@ -10,7 +10,6 @@
     </header>
     <interactive-map v-if="!figureDetail"></interactive-map>
     <figure-detail :figure="figureDetail" v-if="figureDetail"></figure-detail>
-
     <figures-list :historicalFigures="filteredFigures"></figures-list>
 
     <footer id="site-footer">
@@ -25,7 +24,6 @@ import figureDetail from './components/figureDetail'
 import interactiveMap from './components/interactiveMap'
 import FiguresService from './services/FiguresServices.js'
 import figuresFilterSearch from './components/figuresFilterSearch'
-
 import { eventBus } from './main.js'
 
 export default {
@@ -58,7 +56,7 @@ export default {
   'figures-list': figuresList,
   'figure-detail': figureDetail,
   'interactive-map': interactiveMap,
-  'figures-filter-search': figuresFilterSearch
+  'figures-filter-search': figuresFilterSearch,
   },
   methods: {
     fetchFigures(){

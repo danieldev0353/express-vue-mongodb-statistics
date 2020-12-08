@@ -38,15 +38,23 @@
         </section>
       </div>
     </section>
+  
+    <figure-quiz :figure="figure" />
+
   </div>
 </template>
 
 <script>
 
+import figureQuiz from './figureQuiz'
+
 import { eventBus } from '../main.js'
 export default {
   name: "figure-detail",
   props: ["figure"],
+  components: {
+   'figure-quiz': figureQuiz
+  },
   methods: {
     handleClose() {
       eventBus.$emit("close-detail")
