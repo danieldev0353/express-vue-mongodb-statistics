@@ -33,12 +33,11 @@ export default {
   #figure-grid {
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
+      justify-content: left;
     }
 
   .thumbnail {
     width: 250px;
-    margin: 20px;
-    flex-basis: 30%;
+    margin: 0 auto 30px auto;
   }
 </style>
