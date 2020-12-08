@@ -6,7 +6,9 @@
 
             </div>
         </header>
-        <figure-thumbnail v-for="(figure, index) of historicalFigures" :key="index" :figure="figure"/>
+        <div id="figure-grid">
+            <figure-thumbnail class="thumbnail" v-for="(figure, index) in historicalFigures" :key="index" :figure="figure"/>
+        </div>
     </div>
 </template>
 
@@ -25,5 +27,18 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  #list-wrapper {
+    margin: 0px 8%;
+  }
+  #figure-grid {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
 
+  .thumbnail {
+    width: 250px;
+    margin: 20px;
+    flex-basis: 30%;
+  }
 </style>

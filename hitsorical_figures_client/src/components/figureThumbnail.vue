@@ -24,5 +24,30 @@ export default {
 </script>
 
 <style scoped>
+header {
+    border: 1px solid black;
+    padding: 5px;
+    margin: auto;
+}
+
+header > img {
+    display: block;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    border:1px solid black;
+    padding: 5px;
+    margin-top: -1px;
+}
+
+.thumbnail {
+    height: 100%;
+}
+
+.thumbnail:hover {
+    background-color: rgb(225, 254, 245);
+}
 
 </style>
