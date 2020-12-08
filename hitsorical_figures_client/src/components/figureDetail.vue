@@ -38,6 +38,7 @@
         </section>
       </div>
     </section>
+    <hr>
   </div>
 </template>
 
@@ -61,6 +62,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+hr {
+  width: 90%;
+  margin: 50px auto;
+}
 
 .detail-header {
   background-color: rgb(58, 56, 57);
