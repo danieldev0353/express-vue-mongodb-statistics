@@ -3,7 +3,6 @@
         <div id="map-wrap" style="height: 100%">
             <l-map :zoom=2 :center="[40, 10]">
                 <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-                <!-- Thomas Edison -->
                 <l-marker v-for="figure in historicalFigures" :key="figure._id" :lat-lng="[figure.markerLat, figure.markerLng]">
                     <l-icon></l-icon>
                 </l-marker>
