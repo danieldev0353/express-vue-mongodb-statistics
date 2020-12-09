@@ -2,7 +2,7 @@
   <div id= 'quiz-wrapper'>
       <h2>{{figure.name}} Quiz</h2>
       <form  v-on:submit.prevent="handleSubmit">
-        <h3> Q1 Is my birthday {{figure.born.date}}?</h3>
+        <h3> Q1 Is my birthday {{figure.born.date|formatDate}}?</h3>
         <div class="question-wrapper">
           <div>
             <input type="radio" class="question" name="question1"        v-model="q1Answer" value="yes">
