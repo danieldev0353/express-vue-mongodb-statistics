@@ -1,6 +1,9 @@
 <template>
   <div id= 'quiz-wrapper'>
+    <div id="quizTop">
       <h2>{{figure.name}} Quiz</h2>
+      <p>Youre score is {{finalScore}} out of 3</p>
+    </div>
       <form  v-on:submit.prevent="handleSubmit">
         <h3> Q1 Is my birthday {{figure.born.date|formatDate}}?</h3>
         <div class="question-wrapper">
@@ -52,10 +55,15 @@ export default {
     return {
       q1Answer: null,
       q2Answer: null,
-      q3Answer: null,
+      q3Answer: null
     }
   },
   props: ["figure", "historicalFigures"],
+  filters: {
+    formatDate(value) {
+        return new Date(value).toLocaleString().substring(0, 10)
+    }
+  },
   computed:{
     correctFeedback1(){
       let feedbackMessage = ""
@@ -96,6 +104,20 @@ export default {
 
      displayFeedback3(){
       return this.q3Answer ? "visible" : "invisible"
+    },
+
+    finalScore(){
+      let score = 0 
+      if (this.q1Answer === 'yes'){
+        score ++
+      }
+      if(this.q2Answer === 'yes'){
+        score ++
+      }
+      if(this.q3Answer === 'yes'){
+        score++
+      }
+      return score
     }
   }
 
@@ -107,6 +129,9 @@ h2 {
   color:white;
   font-family: "ReithBold";
   padding: 1em;
+  font-size: 1.5em;
+  margin: 1em;
+  margin-left: 0;
 }
 h3 {
   padding: 1em;
@@ -148,6 +173,21 @@ form {
 p{
   font-size: 20px;
   margin-right: 1em;
+}
+
+#quizTop {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+#quizTop p {
+  color:white;
+  font-family: "ReithBold";
+  padding: 1em;
+  font-size: 1.5em;
+  margin: 1em;
+  margin-right: 0;
 }
 
 </style>
