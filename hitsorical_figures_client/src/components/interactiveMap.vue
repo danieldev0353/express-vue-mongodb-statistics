@@ -1,10 +1,13 @@
 <template>
     <div id="map-container">
         <div id="map-wrap" style="height: 100%">
-            <l-map :zoom=2 :center="[40, 10]">
+            <l-map :zoom=2 :center="[25, 25]">
                 <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-                <l-marker v-for="figure in historicalFigures" :key="figure._id" :lat-lng="[figure.markerLat, figure.markerLng]">
-                    <l-icon></l-icon>
+                <l-marker v-for="figure in historicalFigures" :key="figure._id" :lat-lng="[figure.markerLat, figure.markerLng]" v-on:click=handleClick(figure)>
+                    <l-icon class="map-icon"
+                            :icon-size= "[55, 60]"
+                            :icon-url="require(`@/assets/${figure.avatarPath}`)"></l-icon>
+                    <l-tooltip class="tooltip">{{figure.name}}</l-tooltip>
                 </l-marker>
                 <!-- Thomas Edison
                 <l-marker :lat-lng="[40.3, -74.2]"/>
@@ -35,7 +38,9 @@
 
 <script>
 import { L, icon} from 'leaflet';
-import { LMap, LTileLayer, LMarker, LIcon } from 'vue2-leaflet';
+import { LMap, LTileLayer, LMarker, LIcon, LTooltip } from 'vue2-leaflet';
+
+import { eventBus } from '../main.js'
 
 export default {
     name: "interactive-map",
@@ -44,7 +49,14 @@ export default {
         LMap,
         LTileLayer,
         LMarker,
-        LIcon
+        LIcon,
+        LTooltip
+    },
+    methods: {
+        handleClick(figure){
+            eventBus.$emit('show-figure', figure)
+
+        }
     }
 
 }
@@ -54,5 +66,16 @@ export default {
 #map-container {
     height: 500px;
     margin: 10px 5%;
+}
+
+.map-icon {
+    width: 80px;
+}
+
+.tooltip {
+    font-family: "ReithBold";
+    font-size: 1.6em;
+    color: rgb(229,100,15);
+    margin: 0px 10px;
 }
 </style>
