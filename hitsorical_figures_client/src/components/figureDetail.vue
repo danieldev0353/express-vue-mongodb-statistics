@@ -13,10 +13,10 @@
           <span>{{figure.occupation}}</span>
           <br>
           <span class="bold">Born: </span>
-          <span>{{figure.born.date}}, {{figure.born.place}}</span>
+          <span>{{figure.born.date|formatDate}} in {{figure.born.place}}</span>
           <br>
           <span class="bold">Died: </span>
-          <span>{{figure.died.date}}, {{figure.died.place}}</span>
+          <span>{{figure.died.date|formatDate}} in {{figure.died.place}}</span>
           <br>
           <span class="bold">Best known for: </span>
           <span>{{figure.bestKnownFor}}</span>
@@ -50,6 +50,11 @@ import { eventBus } from '../main.js'
 export default {
   name: "figure-detail",
   props: ["figure"],
+  filters: {
+    formatDate(value) {
+        return new Date(value).toLocaleString().substring(0, 10)
+    }
+  },
   components: {
    'figure-quiz': figureQuiz
   },
