@@ -6,7 +6,7 @@
         <button v-on:click="handleClose" class='x-button'>X</button>
       </div>
     </header>
-    <section class='content'>
+    <section class='content' :class='contnentInvisible'>
       <div class='info'>
         <div class='info-textbox'>
           <span class="bold">Occupation: </span>
@@ -38,7 +38,10 @@
         </section>
       </div>
     </section>
-    <figure-quiz :figure="figure" />
+    <div id="quizButton">
+      <button v-on:click="showQuiz()" :class='contnentInvisible'>{{figure.name}} Quiz</button>
+    </div>
+    <figure-quiz :figure="figure" :class="quizVisible"/>
     <hr>
   </div>
 </template>
@@ -49,6 +52,13 @@ import { eventBus } from '../main.js'
 
 export default {
   name: "figure-detail",
+  data(){
+    return {
+      quizVisible: "",
+      contnentInvisible: ""
+    }
+      
+  },
   props: ["figure"],
   filters: {
     formatDate(value) {
@@ -61,6 +71,11 @@ export default {
   methods: {
     handleClose() {
       eventBus.$emit("close-detail")
+    },
+
+    showQuiz(){
+      this.quizVisible = "show"
+      this.contnentInvisible = "hide"
     }
   },
   computed:{
@@ -72,7 +87,30 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#quizButton{
+  display: block;
+  text-align: center;
+}
 
+#quizButton > button {
+  background-color:rgb(58, 56, 57);
+  font-size: 20px;
+  padding: 1%;
+  border: none;
+  border-radius: 10px;
+  color:white;
+}
+#quiz-wrapper{
+  display: none ;
+}
+
+#quiz-wrapper.show {
+  display: block;
+  margin-top: 3%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 hr {
   width: 90%;
   margin: 50px auto;
@@ -90,6 +128,12 @@ hr {
   margin: 10px 8%;
 }
 
+.content.hide {
+  display: none;
+}
+.hide{
+  display: none;
+}
 .avatar {
   width: 300px;
 }
