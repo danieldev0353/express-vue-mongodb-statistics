@@ -34,11 +34,11 @@ db.historical_figures.insertMany(
          avatarPath: "Cleopatra.png",
          category: "Ancient Egypt",
          born: {
-             date: "69 BC",
+             date: "0131-10-10",
              place: "Alexandria, Egypt"
          },
          died: {
-            date: "August 30, 30 BC",
+            date: "0169-08-30",
             place: "Unknown"
          },
          bestKnownFor: "The last pharaoh of Ancient Egypt",
@@ -233,7 +233,7 @@ db.historical_figures.insertMany(
    avatarPath: "JoanOfArc.png",
    category: "Leaders",
    born: {
-       date: "1412",
+       date: "1412-05-01",
        place: "Domremy, France"
    },
    died: {
