@@ -3,15 +3,12 @@
     <header id="site-header">
       <div id="logo-container">
         <h1>Historical Figures</h1>
-        <!-- <figures-filter-search :historicalFigures="historicalFigures" /> -->
-        <input type="text" v-model="searchTerm" placeholder="Search...">
       </div>
-      <input type="text" class="search-box" placeholder="Search...">
+      <input type="text" class="search-box" v-model="searchTerm" placeholder="Search...">
     </header>
     <interactive-map v-if="!figureDetail"></interactive-map>
     <figure-detail :figure="figureDetail" v-if="figureDetail"></figure-detail>
     <figures-list :historicalFigures="filteredFigures"></figures-list>
-
     <footer id="site-footer">
     </footer>
 
@@ -82,15 +79,27 @@ export default {
 </script>
 
 <style lang="css">
+@font-face {
+  font-family: "Reith";
+  src: local("Reith"),
+   url(./fonts/BBCReithSans_Rg.ttf) format("truetype");
+}
+@font-face {
+  font-family: "ReithBold";
+  src: local("Reith"),
+   url(./fonts/BBCReithSans_Bd.ttf) format("truetype");
+}
+
 body {
   margin: 0px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Reith"
 }
 
 #site-header {
   display: flex;
   flex-direction: row;
-  background-color: rgb(237, 127, 187);
+  background: rgb(229,100,15);
+  background: linear-gradient(172deg, rgba(229,100,15,1) 28%, rgba(242,178,7,1) 78%, rgba(255,222,0,1) 100%);
   justify-content: space-between;
   align-content: center;
   padding: 0px 5%;
@@ -104,6 +113,11 @@ body {
 #site-footer {
   padding: 5%;
   background-color: rgb(58, 56, 57);
+}
+
+h1{
+  font-family: ReithBold;
+  color: white;
 }
 
 </style>

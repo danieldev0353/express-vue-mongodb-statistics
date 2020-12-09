@@ -5,6 +5,7 @@ db.dropDatabase()
 db.historical_figures.insertMany(
     [
         {name: "Thomas Edison",
+         avatarPath: "ThomasEdison.png", 
          category: "science",
          born: {
              date: "1847-02-11",
@@ -28,6 +29,7 @@ db.historical_figures.insertMany(
          biography: "Thomas Edison may be the greatest inventor in history. He has over 1000 patents in his name. Many of his inventions still have a major effect on our lives today. He was also a business entrepreneur. Several of his inventions were group efforts in his large invention laboratory where he had lots of people working for him to help develop, build, and test his inventions. Edison used his inventions to form companies including General Electric, which is one of the biggest corporations in the world today.",
         },
         {name: "Cleopatra VII",
+         avatarPath: "Cleopatra.png",
          category: "Ancient Egypt",
          born: {
              date: "69 BC",
@@ -50,6 +52,7 @@ db.historical_figures.insertMany(
          biography: "Cleopatra was born a princess of Egypt. Her father was the Pharaoh Ptolemy XII. Cleopatra was smart and cunning growing up. She was her father's favorite child and learned a lot about how the country was ruled from him.", 
         },
         {name: "Winston Churchill",
+        avatarPath: "WinstonChurchill.png",
         category: "Leader",
         born: {
             date: "1874-11-30",
@@ -73,6 +76,7 @@ db.historical_figures.insertMany(
         biography: "Winston Churchill was one of the great world leaders of the 20th century. His leadership helped Britain to stand strong against Hitler and the Germans, even when they were the last country left fighting. He is also famous for his inspiring speeches and quotes.",
        },
        {name: "Frida Kahlo",
+         avatarPath: "FridaKahlo.png",
          category: "Artist",
          born: {
              date: "1907-07-6",
@@ -94,6 +98,7 @@ db.historical_figures.insertMany(
          biography: "Although Frida had some success as an artist during her lifetime, she was not internationally famous. It wasn't until the late 1970s that her artwork was rediscovered by art historians. Since that time, Frida has become so famous that the term 'Fridamania' has been used to describe her popularity.",
         },
         {name: "Henry Ford",
+        avatarPath: "HenryFord.png",
         category: "Inventor",
         born: {
             date: "1863-07-30",
@@ -115,6 +120,7 @@ db.historical_figures.insertMany(
         biography: "Henry Ford is most famous for founding the Ford Motor Company. Ford is still one of the world's largest producers of cars including brands such as Ford, Lincoln, Mercury, Volvo, Mazda, and Land Rover. Ford was a pioneer in manufacturing using the assembly line.",
        },
        {name: "King Henry VIII",
+       avatarPath: "HenryVIII.png",
        category: "Royalty",
        born: {
            date: "1491-06-28",
@@ -137,6 +143,7 @@ db.historical_figures.insertMany(
        biography: "Henry was determined to have a male heir. When Anne Boleyn did not have a son, he had her executed. Then he married Jane Seymour. Jane finally gave Henry what he wanted and had a son named Edward. However, Jane died during childbirth. Henry married three more times including Anne of Cleves, Catherine Howard, and Catherine Parr.",
       },
       {name: "Anne Frank",
+      avatarPath: "AnneFrank.png",
       category: "Writer",
       born: {
           date: "1929-06-12",
@@ -158,6 +165,7 @@ db.historical_figures.insertMany(
       biography: "Anne Frank was born in Frankfurt, Germany on June 12, 1929. Her father, Otto Frank, was a businessman while her mother, Edith, stayed home taking care of Anne and her older sister Margot.",
      },
      {name: "Captain James Cook",
+     avatarPath: "JamesCook.png",
      category: "Explorer",
      born: {
          date: "1728-10-27",
@@ -179,6 +187,7 @@ db.historical_figures.insertMany(
      biography: "James Cook was a British navigator and explorer who sailed and mapped much of the South Pacific.",
     },
     {name: "Rosa Parks",
+    avatarPath: "RosaParks.png",
     category: "Leaders",
     born: {
         date: "1913-02-4",
@@ -200,6 +209,7 @@ db.historical_figures.insertMany(
     biography: "Rosa grew up in the southern United States in Alabama. Her full name was Rosa Louise McCauley and she was born in Tuskegee, Alabama on February 4, 1913 to Leona and James McCauley. Her mother was a teacher and her father a carpenter. She had a younger brother named Sylvester.",
    },
    {name: "Joan of Arc",
+   avatarPath: "JoanOfArc.png",
    category: "Leaders",
    born: {
        date: "1412",
@@ -222,6 +232,7 @@ db.historical_figures.insertMany(
    biography: "Joan of Arc grew up in a small town in France. Her father, Jacques, was a farmer who also worked as an official for the town. Joan worked on the farm and learned how to sew from her mother, Isabelle. Joan was also very religious.",
   },
   {name: "Mohandas Gandhi",
+  avatarPath: "MohandasGandhi.png",
   category: "Activist",
   born: {
       date: "1869-10-2",
