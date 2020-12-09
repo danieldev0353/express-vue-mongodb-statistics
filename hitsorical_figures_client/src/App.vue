@@ -5,6 +5,7 @@
         <h1>Historical Figures</h1>
       </div>
       <input type="text" class="search-box" v-model="searchTerm" placeholder="Search...">
+      <p>{{categories}}</p>
     </header>
     <interactive-map v-if="!figureDetail"></interactive-map>
     <figure-detail :figure="figureDetail" v-if="figureDetail"></figure-detail>
@@ -20,7 +21,7 @@ import figuresList from './components/figuresList'
 import figureDetail from './components/figureDetail'
 import interactiveMap from './components/interactiveMap'
 import FiguresService from './services/FiguresServices.js'
-import figuresFilterSearch from './components/figuresFilterSearch'
+
 
 import { eventBus } from './main.js'
 
@@ -30,7 +31,7 @@ export default {
   return {
     historicalFigures: [],
     figureDetail: null,
-    favourites: [],
+    categories: [],
     searchTerm: ""
     }
   },
@@ -48,13 +49,20 @@ export default {
   computed:{
     filteredFigures(){
       return this.historicalFigures.filter(figure =>this.figuresFilter(figure))
-  }
+  },
+
+    figureCategories(){
+      for (const figure in this.historicalFigures){
+        if(!this.categories.includes(figure.category))
+        this.categories.push(figure.category)
+      }
+      return this.categories
+    }
  },
   components: {
   'figures-list': figuresList,
   'figure-detail': figureDetail,
-  'interactive-map': interactiveMap,
-  'figures-filter-search': figuresFilterSearch
+  'interactive-map': interactiveMap
   },
   methods: {
     fetchFigures(){
