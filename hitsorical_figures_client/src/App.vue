@@ -30,7 +30,7 @@ export default {
   return {
     historicalFigures: [],
     figureDetail: null,
-    favourites: [],
+    categories: [],
     searchTerm: ""
     }
   },
@@ -48,13 +48,22 @@ export default {
   computed:{
     filteredFigures(){
       return this.historicalFigures.filter(figure =>this.figuresFilter(figure))
-  }
+  },
+
+    figureCategories(){
+      for (const figure in this.historicalFigures){
+        if(!this.categories.includes(figure.category))
+        this.categories.push(figure.category)
+      }
+      return this.categories
+    }
  },
   components: {
   'figures-list': figuresList,
   'figure-detail': figureDetail,
   'interactive-map': interactiveMap,
-  'figures-filter-search': figuresFilterSearch
+  'figures-filter-search': figuresFilterSearch,
+
   },
   methods: {
     fetchFigures(){

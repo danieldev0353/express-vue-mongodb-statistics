@@ -38,11 +38,14 @@
         </section>
       </div>
     </section>
+
+    <figure-quiz :figure="figure" />
     <hr>
   </div>
 </template>
 
 <script>
+import figureQuiz from './figureQuiz'
 import { eventBus } from '../main.js'
 
 export default {
@@ -52,6 +55,9 @@ export default {
     formatDate(value) {
         return new Date(value).toLocaleString().substring(0, 10)
     }
+  },
+  components: {
+   'figure-quiz': figureQuiz
   },
   methods: {
     handleClose() {
