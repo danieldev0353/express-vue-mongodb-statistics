@@ -21,7 +21,7 @@ import figuresList from './components/figuresList'
 import figureDetail from './components/figureDetail'
 import interactiveMap from './components/interactiveMap'
 import FiguresService from './services/FiguresServices.js'
-
+import figuresFilterSearch from './components/figuresFilterSearch'
 
 import { eventBus } from './main.js'
 
@@ -62,7 +62,9 @@ export default {
   components: {
   'figures-list': figuresList,
   'figure-detail': figureDetail,
-  'interactive-map': interactiveMap
+  'interactive-map': interactiveMap,
+  'figures-filter-search': figuresFilterSearch,
+  
   },
   methods: {
     fetchFigures(){
