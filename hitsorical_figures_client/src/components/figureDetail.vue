@@ -38,7 +38,6 @@
         </section>
       </div>
     </section>
-
     <figure-quiz :figure="figure" />
     <hr>
   </div>
