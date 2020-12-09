@@ -97,9 +97,8 @@ export default {
      displayFeedback3(){
       return this.q3Answer ? "visible" : "invisible"
     }
-  },
-  methods: {
-}
+  }
+
 }
 </script>
 
@@ -120,7 +119,7 @@ form {
   margin: 10px;
 }
 
- .invisible {
+.invisible {
   display: none;
 }
 .visible {
@@ -133,9 +132,9 @@ form {
   margin: auto;
   background: rgb(229,100,15);
   background: linear-gradient(172deg, rgba(229,100,15,1) 28%, rgba(242,178,7,1) 78%, rgba(255,222,0,1) 100%);
-  border-radius: 5%;
-  
+  border-radius: 5%; 
 }
+
 .question-wrapper{
   display: flex;
   justify-content: space-between;

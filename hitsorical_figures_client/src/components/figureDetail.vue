@@ -42,6 +42,9 @@
       <button v-on:click="showQuiz()" :class='contnentInvisible'>{{figure.name}} Quiz</button>
     </div>
     <figure-quiz :figure="figure" :class="quizVisible"/>
+    <div id="closeQuiz" :class="quizVisible">
+      <button v-on:click="hideQuiz()" >Close</button>
+    </div>
     <hr>
   </div>
 </template>
@@ -76,6 +79,11 @@ export default {
     showQuiz(){
       this.quizVisible = "show"
       this.contnentInvisible = "hide"
+    },
+
+    hideQuiz(){
+      this.quizVisible = "hide"
+      this.contnentInvisible = "show"
     }
   },
   computed:{
@@ -87,6 +95,25 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#closeQuiz {
+  display:none;
+}
+
+#closeQuiz > button {
+  background-color:rgb(58, 56, 57);
+  font-size: 20px;
+  padding: 1%;
+  border: none;
+  border-radius: 10px;
+  color:white;
+}
+
+#closeQuiz.show {
+  display: block;
+  text-align: center;
+  margin: 2%;
+}
+
 #quizButton{
   display: block;
   text-align: center;
