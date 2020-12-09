@@ -6,7 +6,7 @@
       </div>
       <input type="text" class="search-box" v-model="searchTerm" placeholder="Search...">
     </header>
-    <interactive-map v-if="!figureDetail"></interactive-map>
+    <interactive-map v-if="!figureDetail" :historicalFigures="filteredFigures"></interactive-map>
     <figure-detail :figure="figureDetail" v-if="figureDetail"></figure-detail>
     <figures-list :historicalFigures="filteredFigures"></figures-list>
     <footer id="site-footer">
