@@ -57,6 +57,9 @@ footer {
 .thumbnail:hover {
     background-color: rgb(225, 254, 245);
     opacity: 50%;
+    text-decoration: underline;
+    text-decoration-color: white;
+    cursor: pointer;
 }
 
 .thumbnail-footer {

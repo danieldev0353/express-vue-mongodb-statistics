@@ -107,7 +107,8 @@ export default {
 h2 {
   color:white;
   font-family: "ReithBold";
-  padding: 1em;
+  padding: 0px 1em;
+  font-size: 2em;
 }
 h3 {
   padding: 1em;
@@ -117,7 +118,8 @@ h3 {
 form {
   color:white;
   background-color: rgb(58, 56, 57);
-  margin: 10px;
+  margin: 10px ;
+  border-radius: 10px;
 }
 
  .invisible {
@@ -129,8 +131,8 @@ form {
 
 #quiz-wrapper{
   padding: 10px 10px 20px 10px;
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  margin: 40px auto;
   background: rgb(229,100,15);
   background: linear-gradient(172deg, rgba(229,100,15,1) 28%, rgba(242,178,7,1) 78%, rgba(255,222,0,1) 100%);
   border-radius: 5%;
@@ -143,6 +145,7 @@ form {
   background-color: white;
   color: black;
   border: 5px solid  rgb(58, 56, 57);
+  border-radius: 10px;
   
 }
 
