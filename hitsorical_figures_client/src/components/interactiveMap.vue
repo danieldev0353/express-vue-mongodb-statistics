@@ -5,7 +5,9 @@
                 <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
                 <!-- Thomas Edison -->
                 <l-marker v-for="figure in historicalFigures" :key="figure._id" :lat-lng="[figure.markerLat, figure.markerLng]" v-on:click=handleClick(figure)>
-                    <l-icon></l-icon>
+                    <l-icon class="map-icon"
+                            :icon-size= "[50, 50]"
+                            :icon-url="require(`@/assets/${figure.avatarPath}`)"></l-icon>
                 </l-marker>
                 <!-- Thomas Edison
                 <l-marker :lat-lng="[40.3, -74.2]"/>
@@ -63,5 +65,9 @@ export default {
 #map-container {
     height: 500px;
     margin: 10px 5%;
+}
+
+.map-icon {
+    width: 80px;
 }
 </style>
