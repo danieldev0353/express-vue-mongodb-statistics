@@ -6,7 +6,7 @@
         <button v-on:click="handleClose" class='x-button'>X Close</button>
       </div>
     </header>
-    <section class='content'>
+    <section class='content' :class='contnentInvisible'>
       <div class='info'>
         <div class='info-textbox'>
           <span class="bold">Occupation: </span>
@@ -37,8 +37,14 @@
           </ul>
         </section>
       </div>
-    <figure-quiz :figure="figure" />
     </section>
+    <div id="quizButton">
+      <button v-on:click="showQuiz()" :class='contnentInvisible'>{{figure.name}} Quiz</button>
+    </div>
+    <figure-quiz :figure="figure" :class="quizVisible"/>
+    <div id="closeQuiz" :class="quizVisible">
+      <button v-on:click="hideQuiz()" >Close</button>
+    </div>
     <hr>
   </div>
 </template>
@@ -49,6 +55,13 @@ import { eventBus } from '../main.js'
 
 export default {
   name: "figure-detail",
+  data(){
+    return {
+      quizVisible: "",
+      contnentInvisible: ""
+    }
+      
+  },
   props: ["figure"],
   filters: {
     formatDate(value) {
@@ -61,6 +74,16 @@ export default {
   methods: {
     handleClose() {
       eventBus.$emit("close-detail")
+    },
+
+    showQuiz(){
+      this.quizVisible = "show"
+      this.contnentInvisible = "hide"
+    },
+
+    hideQuiz(){
+      this.quizVisible = "hide"
+      this.contnentInvisible = "show"
     }
   },
   computed:{
@@ -72,7 +95,55 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#closeQuiz {
+  display:none;
+}
 
+#closeQuiz > button {
+  background-color:rgb(58, 56, 57);
+  font-size: 20px;
+  padding: 1%;
+  border: none;
+  border-radius: 10px;
+  color:white;
+}
+
+#closeQuiz.show {
+  display: block;
+  text-align: center;
+  margin: 2%;
+}
+
+#quizButton{
+  display: block;
+  text-align: center;
+}
+
+#quizButton > button {
+  background-color:rgb(58, 56, 57);
+  font-size: 20px;
+  padding: 1%;
+  border: none;
+  border-radius: 10px;
+  color:white;
+}
+
+#quizButton > button:hover {
+  background-color:rgb(123, 123, 123);
+  cursor: pointer;
+}
+
+#quiz-wrapper{
+  display: none ;
+}
+
+#quiz-wrapper.show {
+  display: block;
+  margin-top: 3%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 hr {
   width: 90%;
   margin: 50px auto;
@@ -94,6 +165,12 @@ hr {
   margin: 10px 10%;
 }
 
+.content.hide {
+  display: none;
+}
+.hide{
+  display: none;
+}
 .avatar {
   width: 300px;
 }
