@@ -2,10 +2,10 @@
   <div id= 'quiz-wrapper'>
     <div id="quizTop">
       <h2>{{figure.name}} Quiz</h2>
-      <p>Youre score is {{finalScore}} out of 3</p>
+      <p>You're score is {{finalScore}} out of 3</p>
     </div>
       <form  v-on:submit.prevent="handleSubmit">
-        <h3> Q1 Is my birthday {{figure.born.date|formatDate}}?</h3>
+        <h3> Q1: Is my birthday {{figure.born.date|formatDate}}?</h3>
         <div class="question-wrapper">
           <div>
             <input type="radio" class="question" name="question1"        v-model="q1Answer" value="yes">
@@ -18,7 +18,7 @@
       </form>
 
       <form v-on:submit.prevent="handleSubmit">
-        <h3> Q2 Was my job {{figure.occupation}}?</h3>
+        <h3> Q2: Was my job {{figure.occupation}}?</h3>
         <div class="question-wrapper">
           <div>
             <input type="radio" class="question" name="question2" value="yes" v-model="q2Answer">
@@ -31,7 +31,7 @@
       </form>
 
       <form v-on:submit.prevent="handleSubmit" >
-        <h3> Q3 Am I best known for {{figure.bestKnownFor}}?</h3>
+        <h3> Q3: Am I best known for {{figure.bestKnownFor}}?</h3>
         <div class="question-wrapper" id="last" >
           <div>
             <input type="radio"  name="question3" value="yes" v-model="q3Answer">

@@ -127,6 +127,12 @@ export default {
   border-radius: 10px;
   color:white;
 }
+
+#quizButton > button:hover {
+  background-color:rgb(123, 123, 123);
+  cursor: pointer;
+}
+
 #quiz-wrapper{
   display: none ;
 }
