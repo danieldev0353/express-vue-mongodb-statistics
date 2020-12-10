@@ -2,10 +2,10 @@
   <div id= 'quiz-wrapper'>
     <div id="quizTop">
       <h2>{{figure.name}} Quiz</h2>
-      <p>Youre score is {{finalScore}} out of 3</p>
+      <p>You're score is {{finalScore}} out of 3</p>
     </div>
       <form  v-on:submit.prevent="handleSubmit">
-        <h3> Q1 Is my birthday {{figure.born.date|formatDate}}?</h3>
+        <h3> Q1: Is my birthday {{figure.born.date|formatDate}}?</h3>
         <div class="question-wrapper">
           <div>
             <input type="radio" class="question" name="question1"        v-model="q1Answer" value="yes">
@@ -18,7 +18,7 @@
       </form>
 
       <form v-on:submit.prevent="handleSubmit">
-        <h3> Q2 Was my job {{figure.occupation}}?</h3>
+        <h3> Q2: Was my job {{figure.occupation}}?</h3>
         <div class="question-wrapper">
           <div>
             <input type="radio" class="question" name="question2" value="yes" v-model="q2Answer">
@@ -31,7 +31,7 @@
       </form>
 
       <form v-on:submit.prevent="handleSubmit" >
-        <h3> Q3 Am I best known for {{figure.bestKnownFor}}?</h3>
+        <h3> Q3: Am I best known for {{figure.bestKnownFor}}?</h3>
         <div class="question-wrapper" id="last" >
           <div>
             <input type="radio"  name="question3" value="yes" v-model="q3Answer">
@@ -128,10 +128,10 @@ export default {
 h2 {
   color:white;
   font-family: "ReithBold";
-  padding: 1em;
-  font-size: 1.5em;
   margin: 1em;
   margin-left: 0;
+  padding: 0px 1em;
+  font-size: 2em;
 }
 h3 {
   padding: 1em;
@@ -141,7 +141,8 @@ h3 {
 form {
   color:white;
   background-color: rgb(58, 56, 57);
-  margin: 10px;
+  margin: 10px ;
+  border-radius: 10px;
 }
 
 .invisible {
@@ -153,8 +154,8 @@ form {
 
 #quiz-wrapper{
   padding: 10px 10px 20px 10px;
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  margin: 40px auto;
   background: rgb(229,100,15);
   background: linear-gradient(172deg, rgba(229,100,15,1) 28%, rgba(242,178,7,1) 78%, rgba(255,222,0,1) 100%);
   border-radius: 5%; 
@@ -167,6 +168,7 @@ form {
   background-color: white;
   color: black;
   border: 5px solid  rgb(58, 56, 57);
+  border-radius: 10px;
   
 }
 
