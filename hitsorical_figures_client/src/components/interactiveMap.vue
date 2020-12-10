@@ -66,6 +66,8 @@ export default {
 #map-container {
     height: 500px;
     margin: 10px 5%;
+    padding: 1% 1% 0px 1%;
+    background-color: white;
 }
 
 .map-icon {

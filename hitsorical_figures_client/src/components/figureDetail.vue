@@ -3,7 +3,7 @@
     <header class="detail-header">
       <h2>{{figure.name}}</h2>
       <div>
-        <button v-on:click="handleClose" class='x-button'>X</button>
+        <button v-on:click="handleClose" class='x-button'>X Close</button>
       </div>
     </header>
     <section class='content' :class='contnentInvisible'>
@@ -143,16 +143,20 @@ hr {
   margin: 50px auto;
 }
 
+.detail-wrapper {
+  background-color: white;
+}
+
 .detail-header {
   background-color: rgb(58, 56, 57);
   color: white;
-  padding: 0px 3%;
+  padding: 0px 8%;
   display: flex;
   justify-content: space-between;
 }
 
 .content {
-  margin: 10px 8%;
+  margin: 10px 10%;
 }
 
 .content.hide {
@@ -173,13 +177,34 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 85%;
+  margin: auto;
 }
 
 .bold {
   font-family: "ReithBold";
 }
 
+.x-button {
+  font-family: "ReithBold";
+  font-size: large;
+  color: white;
+  background-color: rgb(229,100,15);
+  background: linear-gradient(172deg, rgba(229,100,15,1) 40%, rgba(242,178,7,1) 100%);
+  border: none;
+  box-shadow: 0 4px rgb(114, 55, 15);
+  border-radius: 5px;
+  position: relative;
+  top: -15px;
+}
 
+.x-button:hover {
+  opacity: 90%;
+  cursor: pointer;
+  transform: translateY(3px);
+  background: linear-gradient(172deg, rgb(249, 147, 80) 10%, rgb(255, 211, 89) 70%);
+  box-shadow: 0 1px rgb(162, 78, 22);
+}
 
 
 </style>
