@@ -173,8 +173,8 @@ form {
 }
 
 p{
-   padding: 0px 1em;
-  font-size: 2em;
+   /* padding: 0px 1em; */
+  font-size: 1em;
   margin-right: 1em;
 }
 
